@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <title>CETRAK CETREK LAMPU</title>
+</head>
+
+<body class="bg-gray-800">
+    <div class="bg-gray-600 justify-center items-center flex flex-col"
+        style="color: beige; font-size: x-large; font-family: serif; text-align: center; padding: 20px;">
+        <h1>BIKIN CETRAK CETREK LAMPU</h1>
+    </div>
+
+    <div class="flex flex-start" style="margin: 50px; padding: 20px;">
+        <div class="flex justify-center items-center bg-gray-800 gap-4">
+            <!-- SAKLAR GROUP RUANG KELUARGA -->
+            <div class="flex flex-col items-center justify-center"
+                style="background-color: gray; padding: 20px; border-radius: 20px; margin: 30px;">
+                <h2
+                    style="color: rgb(0, 0, 0); font-size:medium; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    RUANG KELUARGA</h2>
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="toggleLampu" class="sr-only peer" onchange="toggleRuangan()">
+                    <div
+                        class="m-3 relative w-11 h-6 bg-black-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600  dark:peer-checked:bg-blue-600">
+                    </div>
+                </label>
+            </div>
+            <!-- LAMPU 1 -->
+            <div class="flex flex-col gap-2 items-center m-6">
+                <h2 style="color: beige; font-size: large; font-family: 'Courier New', Courier, monospace;">
+                    Lampu 1</h2>
+                <img src="assets/images/off.gif" alt="" id="lampu1">
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="toggle1" class="sr-only peer" onchange="saklar(1)">
+                    <div
+                        class="m-3 relative w-11 h-6 bg-black-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600  dark:peer-checked:bg-blue-600">
+                    </div>
+                </label>
+            </div>
+
+            <!-- LAMPU 2 -->
+            <div class="flex flex-col gap-2 items-center m-6">
+                <h2 style="color: beige; font-size: large; font-family: 'Courier New', Courier, monospace;">
+                    Lampu 2</h2>
+                <img src="assets/images/off.gif" alt="" id="lampu2">
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="toggle2" class="sr-only peer" onchange="saklar(2)">
+                    <div
+                        class="m-3 relative w-11 h-6 bg-black-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600  dark:peer-checked:bg-blue-600">
+                    </div>
+                </label>
+            </div>
+
+            <!-- LAMPU 3 -->
+            <div class="flex flex-col gap-2 items-center m-6">
+                <h2 style="color: beige; font-size: large; font-family: 'Courier New', Courier, monospace;">
+                    Lampu 3</h2>
+                <img src="assets/images/off.gif" alt="" id="lampu3">
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="toggle3" class="sr-only peer" onchange="saklar(3)">
+                    <div
+                        class="m-3 relative w-11 h-6 bg-black-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600  dark:peer-checked:bg-blue-600">
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-start" style="margin: 50px; padding: 20px;">
+        <div class="flex justify-center items-center bg-gray-800 gap-4">
+            <!-- SAKLAR GROUP RUANG MAKAN -->
+            <div class="flex flex-col items-center justify-center"
+                style="background-color: gray; padding: 20px; border-radius: 20px; margin: 30px;">
+                <h2
+                    style="color: rgb(0, 0, 0); font-size: large; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    RUANG MAKAN</h2>
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="toggleLampuMakan" class="sr-only peer" onchange="toggleRuanganMakan()">
+                    <div
+                        class="m-3 relative w-11 h-6 bg-black-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600  dark:peer-checked:bg-blue-600">
+                    </div>
+                </label>
+            </div>
+            <!-- LAMPU 1 -->
+            <div class="flex flex-col gap-2 items-center m-6">
+                <h2 style="color: beige; font-size: large; font-family: 'Courier New', Courier, monospace;">
+                    Lampu 1</h2>
+                <img src="assets/images/off.gif" alt="" id="lampuMakan1">
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="toggleMakan1" class="sr-only peer" onchange="saklarMakan(1)">
+                    <div
+                        class="m-3 relative w-11 h-6 bg-black-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600  dark:peer-checked:bg-blue-600">
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-start" style="margin: 50px; padding: 20px;">
+        <div class="flex justify-center items-center bg-gray-800 gap-4">
+            <!-- SAKLAR GROUP RUANG TIDUR -->
+            <div class="flex flex-col items-center justify-center"
+                style="background-color: gray; padding: 20px; border-radius: 20px; margin: 30px;">
+                <h2
+                    style="color: rgb(0, 0, 0); font-size: large; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    RUANG TIDUR</h2>
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="toggleLampuTidur" class="sr-only peer" onchange="toggleRuanganTidur()">
+                    <div
+                        class="m-3 relative w-11 h-6 bg-black-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600  dark:peer-checked:bg-blue-600">
+                    </div>
+                </label>
+            </div>
+            <!-- LAMPU 1 -->
+            <div class="flex flex-col gap-2 items-center m-6">
+                <h2 style="color: beige; font-size: large; font-family: 'Courier New', Courier, monospace;">
+                    Lampu 1</h2>
+                <img src="assets/images/off.gif" alt="" id="lampuTidur1">
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="toggleTidur1" class="sr-only peer" onchange="saklarTidur(1)">
+                    <div
+                        class="m-3 relative w-11 h-6 bg-black-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600  dark:peer-checked:bg-blue-600">
+                    </div>
+                </label>
+            </div>
+
+            <!-- LAMPU 2 -->
+            <div class="flex flex-col gap-2 items-center m-6">
+                <h2 style="color: beige; font-size: large; font-family: 'Courier New', Courier, monospace;">
+                    Lampu 2</h2>
+                <img src="assets/images/off.gif" alt="" id="lampuTidur2">
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="toggleTidur2" class="sr-only peer" onchange="saklarTidur(2)">
+                    <div
+                        class="m-3 relative w-11 h-6 bg-black-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600  dark:peer-checked:bg-blue-600">
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-start" style="margin: 50px; padding: 20px;">
+        <div class="flex justify-center items-center bg-gray-800 gap-4">
+            <!-- SAKLAR GROUP RUANG TAMU -->
+            <div class="flex flex-col items-center justify-center"
+                style="background-color: gray; padding: 20px; border-radius: 20px; margin: 30px;">
+                <h2
+                    style="color: rgb(0, 0, 0); font-size: large; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    RUANG TAMU</h2>
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="toggleLampuTamu" class="sr-only peer" onchange="toggleRuanganTamu()">
+                    <div
+                        class="m-3 relative w-11 h-6 bg-black-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600  dark:peer-checked:bg-blue-600">
+                    </div>
+                </label>
+            </div>
+            <!-- LAMPU 1 -->
+            <div class="flex flex-col gap-2 items-center m-6">
+                <h2 style="color: beige; font-size: large; font-family: 'Courier New', Courier, monospace;">
+                    Lampu 1</h2>
+                <img src="assets/images/off.gif" alt="" id="lampuTamu1">
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="toggleTamu1" class="sr-only peer" onchange="saklarTamu(1)">
+                    <div
+                        class="m-3 relative w-11 h-6 bg-black-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600  dark:peer-checked:bg-blue-600">
+                    </div>
+                </label>
+            </div>
+
+            <!-- LAMPU 2 -->
+            <div class="flex flex-col gap-2 items-center m-6">
+                <h2 style="color: beige; font-size: large; font-family: 'Courier New', Courier, monospace;">
+                    Lampu 2</h2>
+                <img src="assets/images/off.gif" alt="" id="lampuTamu2">
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="toggleTamu2" class="sr-only peer" onchange="saklarTamu(2)">
+                    <div
+                        class="m-3 relative w-11 h-6 bg-black-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600  dark:peer-checked:bg-blue-600">
+                    </div>
+                </label>
+            </div>
+
+            <!-- LAMPU 3 -->
+            <div class="flex flex-col gap-2 items-center m-6">
+                <h2 style="color: beige; font-size: large; font-family: 'Courier New', Courier, monospace;">
+                    Lampu 3</h2>
+                <img src="assets/images/off.gif" alt="" id="lampuTamu3">
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="toggleTamu3" class="sr-only peer" onchange="saklarTamu(3)">
+                    <div
+                        class="m-3 relative w-11 h-6 bg-black-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600  dark:peer-checked:bg-blue-600">
+                    </div>
+                </label>
+            </div>
+
+            <!-- LAMPU 4 -->
+            <div class="flex flex-col gap-2 items-center m-6">
+                <h2 style="color: beige; font-size: large; font-family: 'Courier New', Courier, monospace;">
+                    Lampu 4</h2>
+                <img src="assets/images/off.gif" alt="" id="lampuTamu4">
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="toggleTamu4" class="sr-only peer" onchange="saklarTamu(4)">
+                    <div
+                        class="m-3 relative w-11 h-6 bg-black-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600  dark:peer-checked:bg-blue-600">
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<!-- JAVA SCRIPT -->
+<script src="saklar.js" type="application/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+</html>
